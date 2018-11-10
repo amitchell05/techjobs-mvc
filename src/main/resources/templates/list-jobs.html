@@ -15,8 +15,8 @@
     <!-- TODO #3 - Use the same list display from search.html -->
     <table class="job-listing" th:each="job : ${jobs}">
         <tr th:each="aJob : ${job.entrySet()}">
-            <td class="job-key" th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
-            <td th:text="${aJob.getValue()}"></td>
+            <td class="first-child" th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
+            <td class="last-child" th:text="${aJob.getValue()}"></td>
         </tr>
     </table>
 

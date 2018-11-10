@@ -7,11 +7,6 @@ td, th {
 
 }
 
-td.job-key {
-    font-weight: bold;
-
-}
-
 tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
