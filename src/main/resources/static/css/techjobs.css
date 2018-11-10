@@ -4,6 +4,12 @@
 
 td, th {
     padding: 10px;
+
+}
+
+td.job-key {
+    font-weight: bold;
+
 }
 
 tr:nth-child(odd) {
