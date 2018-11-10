@@ -36,15 +36,18 @@
 
     <hr />
 
-    <!--<h3 th:text="${jobs.size()} + ' Result(s)'"></h3>-->
+    <div th:if="${jobs} and ${jobs.size()}">
+        <h3 th:text="${jobs.size()} + ' Result(s)'"></h3>
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
-    <table th:each="job : ${jobs}">
-        <tr th:each="aJob : ${job.entrySet()}">
-            <td th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
-            <td th:text="${aJob.getValue()}"></td>
-        </tr>
-    </table>
+        <!-- TODO #2 - Loop over jobs map to display all job fields -->
+        <table th:each="job : ${jobs}">
+            <tr th:each="aJob : ${job.entrySet()}">
+                <td th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
+                <td th:text="${aJob.getValue()}"></td>
+            </tr>
+        </table>
+
+    </div>
 
 </div>
 
