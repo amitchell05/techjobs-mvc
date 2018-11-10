@@ -39,8 +39,8 @@
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
     <table th:each="job : ${jobs}">
         <tr th:each="aJob : ${job.entrySet()}">
-            <td th:text="${aJob.getKey()}">${aJob.getKey()}</td>
-            <td th:text="${aJob.getValue()}">${aJob.getValue()}</td>
+            <td th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
+            <td th:text="${aJob.getValue()}"></td>
         </tr>
     </table>
 
