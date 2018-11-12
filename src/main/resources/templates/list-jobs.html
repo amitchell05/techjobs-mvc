@@ -16,7 +16,7 @@
     <table class="job-listing" th:each="job : ${jobs}">
         <tr th:each="aJob : ${job.entrySet()}">
             <td class="first-child" th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
-            <td class="last-child" th:text="${aJob.getValue()}"></td>
+            <td class="last-child"  th:text="${aJob.getValue()}"></td>
         </tr>
     </table>
 
