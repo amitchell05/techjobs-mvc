@@ -48,9 +48,9 @@
 
         <!-- TODO #2 - Loop over jobs map to display all job fields -->
         <table class="job-listing" th:each="job : ${jobs}">
-            <tr th:each="aJob : ${job.entrySet()}">
-                <td class="first-child" th:text="${#strings.capitalizeWords(aJob.getKey())}"></td>
-                <td class="last-child" th:text="${aJob.getValue()}"></td>
+            <tr th:each="jobTrait : ${job.entrySet()}">
+                <td class="first-child" th:text="${#strings.capitalizeWords(jobTrait.getKey())}"></td>
+                <td class="last-child" th:text="${jobTrait.getValue()}"></td>
             </tr>
         </table>
 
